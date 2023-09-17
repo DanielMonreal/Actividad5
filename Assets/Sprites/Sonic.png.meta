@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -6473,7 +6473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_303
+      name: Item
       rect:
         serializedVersion: 2
         x: 450
@@ -8457,6 +8457,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Item: 1487336081
       Sonic_0: -825551096
       Sonic_1: -1104913424
       Sonic_10: 1792020563
@@ -8685,7 +8686,6 @@ TextureImporter:
       Sonic_300: -99938230
       Sonic_301: -317368956
       Sonic_302: 1004338583
-      Sonic_303: 1487336081
       Sonic_304: -1408868122
       Sonic_305: -546415270
       Sonic_306: -1783494424
