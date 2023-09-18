@@ -38,7 +38,7 @@ public class Jugador : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EnElPiso = true;
-        if(collision.tag == "Obstaculo")
+        if(collision.gameObject.tag== "Obstaculo")
         {
             GameObject.Destroy(this.gameObject);
         }
