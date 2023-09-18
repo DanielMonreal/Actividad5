@@ -9,7 +9,7 @@ public class Jugador : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        
+
     }
     
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class Jugador : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EnElPiso = true;
-        if(collision.gameObject.tag== "Obstaculo")
+        if (collision.gameObject.tag== "Obstaculo")
         {
             GameObject.Destroy(this.gameObject);
         }
