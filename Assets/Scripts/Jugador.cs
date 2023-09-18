@@ -16,6 +16,7 @@ public class Jugador : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown("space") && EnElPiso)
         {
+            EnElPiso = false;
             this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, FuerzaDeSalto));
         }
 
@@ -25,19 +26,25 @@ public class Jugador : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter2D(Collider2D c1)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         EnElPiso = true;
-        if(c1.tag == "Obstaculo")
+        if(collision.gameObject.tag== "Obstaculo")
         {
             GameObject.Destroy(this.gameObject);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        EnElPiso = false;
+        EnElPiso = true;
+        if(collision.tag == "Obstaculo")
+        {
+            GameObject.Destroy(this.gameObject);
+        }
     }
+
+    
 
 
 }
