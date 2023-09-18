@@ -5,10 +5,14 @@ using UnityEngine;
 public class ControladorDeEscena : MonoBehaviour {
     public GameObject Jugador;
     public Camera CamaraDeJuego;
+    public GameObject[] BloquePreFab;
+    public float PunteroDeJuego;
+    public float LugarSeguroDeGeneracion = 12; 
+
+
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        PunteroDeJuego = -7;
     }
 
     // Update is called once per frame
@@ -20,5 +24,11 @@ public class ControladorDeEscena : MonoBehaviour {
             CamaraDeJuego.transform.position.z
             );
         }
+
+        while (Jugador != null && PunteroDeJuego < Jugador.transform.position.x + LugarSeguroDeGeneracion) 
+        {
+            int indiceBloque = Random.Range(0, BloquePreFab.Length - 1);
+        }
+
     }
 }
